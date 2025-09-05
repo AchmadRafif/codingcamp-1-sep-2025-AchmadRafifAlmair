@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>📝 My To-Do List</h1>
+      <p>Kelola tugas harian Anda dengan mudah dan efisien</p>
+    </header>
+
+    <main>
+      <div class="container">
+        <!-- Form Section -->
+        <div class="form-section">
+          <form id="taskForm">
+            <div class="form-group">
+              <label for="taskInput">📌 Nama Tugas:</label>
+              <input
+                type="text"
+                id="taskInput"
+                placeholder="Masukkan nama tugas..."
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="dateInput">📅 Tanggal:</label>
+              <input type="date" id="dateInput" required />
+            </div>
+            <div class="btn-group">
+              <button type="submit" class="btn btn-primary">
+                ✨ Tambah Tugas
+              </button>
+              <button type="button" id="deleteAllBtn" class="btn btn-danger">
+                🗑️ Hapus Semua
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Controls Section -->
+        <div class="controls">
+          <div class="dropdown">
+            <button class="dropdown-btn" id="filterDropdown">
+              🔽 Filter: <span id="currentFilter">Semua Tugas</span>
+            </button>
+            <div class="dropdown-content">
+              <a href="#" data-filter="all" class="active">📋 Semua Tugas</a>
+              <a href="#" data-filter="active">⏳ Tugas Aktif</a>
+              <a href="#" data-filter="completed">✅ Tugas Selesai</a>
+            </div>
+          </div>
+          <div class="task-counter">
+            Total: <span id="taskCount">0</span> tugas
+          </div>
+        </div>
+
+        <!-- Tasks Section -->
+        <div class="tasks-section" id="tasksContainer">
+          <div class="empty-state">
+            <h3>🌟 Belum ada tugas</h3>
+            <p>
+              Tambahkan tugas pertama Anda untuk memulai!<br />Gunakan form di
+              atas untuk menambah tugas baru.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2025 My To-Do List. Dibuat dengan ❤️ untuk produktivitas Anda.
+      </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
